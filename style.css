@@ -1,0 +1,325 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+.wave-animation {
+    position: relative;
+    display: inline-block;
+}
+
+.wave-animation::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: inline-block;
+    animation: wave 1.5s infinite;
+}
+
+.wave-animation::before {
+    animation-delay: calc(0.1s * var(--index));
+    /* Delay each letter's animation */
+}
+
+.wave-animation::before {
+    color: #ca1717;
+    /* Customize the color of the animated wave */
+}
+
+
+
+
+
+.banner {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(ocean.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.navbar {
+    width: 85%;
+    margin: auto;
+    padding: 35px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 15px;
+}
+
+.logo {
+    width: 80px;
+    cursor: pointer;
+    border-radius: 20%;
+}
+
+.navbar ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.navbar ul li::after {
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #009688;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+
+.navbar ul li:hover::after {
+    width: 100%;
+}
+
+.content {
+    width: 50%;
+    position: absolute;
+    top: 30%;
+    transform: rotateY('-50%');
+    text-align: center;
+    color: #fff;
+}
+
+.content h1 {
+    font-size: 30px;
+    margin-top: 80px;
+}
+
+.content p {
+    margin: 20px auto;
+    font-weight: 100;
+    line-height: 20px;
+}
+
+button {
+    width: 200px;
+    padding: 15px 0;
+    text-align: center;
+    margin: 20px 10px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid #02ebd3;
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+span {
+    background: #2a463c;
+    height: 100%;
+    width: 0;
+    border-radius: 25px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: 0.5s;
+}
+
+button:hover span {
+    width: 100%;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+.ian {
+    display: flex;
+    border-radius: 50%;
+    width: 400px;
+    height: 400px;
+    margin-left: 55%;
+    margin-top: 50px;
+
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+}
+
+.social-icons a {
+    display: inline-block;
+    width: 70px;
+    height: 70px;
+    margin: 30px;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+.social-icons a.facebook {
+    background-image: url(f.jpg);
+    /* Replace with your Facebook icon image */
+}
+
+.social-icons a.twitter {
+    background-image: url(twitter.jpg);
+    /* Replace with your Twitter icon image */
+}
+
+.social-icons a.instagram {
+    background-image: url(ig.jpg);
+    /* Replace with your Instagram icon image */
+}
+
+.social-icons a:hover {
+    opacity: 0.8;
+}
+
+.second {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(ocean.png);
+    background-size: cover;
+    background-position: center;
+
+}
+
+.pictures h1 {
+    color: white;
+    font-size: 40px;
+    text-align: center;
+    padding-bottom: 3%;
+}
+
+.slideshow-container {
+    position: relative;
+    width: 40%;
+    max-width: 800px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.slide {
+    display: none;
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+}
+
+.slideshow-container .slide:first-child {
+    display: block;
+}
+
+.prev,
+.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 16px;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.know {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(ocean.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.mee h1 {
+    text-align: center;
+    color: #fff;
+    font-size: 40px;
+}
+
+.mee h2 {
+    text-align: center;
+    color: #fff;
+    margin: 3%;
+}
+
+.mee p {
+    color: #fff;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 5%;
+    font-size: 17px;
+
+}
+
+.proj {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(ocean.png);
+    background-size: cover;
+    background-position: center;
+}
+
+
+.pjec h1 {
+    color: white;
+    text-align: center;
+}
+
+.pjec h2 {
+    color: white;
+    text-align: center;
+    font-size: 60px;
+    padding-top: 4%;
+}
+
+.waving-color {
+    display: inline-block;
+    animation: wave 2s infinite;
+}
+
+@keyframes wave {
+    0% {
+        color: red;
+    }
+
+    25% {
+        color: blue;
+    }
+
+    50% {
+        color: green;
+    }
+
+    75% {
+        color: yellow;
+    }
+
+    100% {
+        color: red;
+    }
+}
